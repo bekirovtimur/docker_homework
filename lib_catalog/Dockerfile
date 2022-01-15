@@ -4,6 +4,5 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /backend
 COPY ./ /backend
 RUN pip install --upgrade pip && pip install -r requirements.txt
-RUN python manage.py migrate
 EXPOSE 3000
 ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:3000"]
